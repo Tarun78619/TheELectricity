@@ -1,0 +1,143 @@
+/* General Styles */
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(91, 88, 88);
+}
+
+/* Responsive Container for the Table */
+/* Container and Header Styles */
+.container {
+  max-width: 1900px; /* Increased width to handle more data */
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.batman {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #4378d4;
+  border-radius: 4%;
+}
+
+/* Table Styles */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto; /* Ensures that the table columns have equal widths */
+}
+
+/*.user-table th,
+.user-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}*/
+
+/* Apply specific widths to columns with shorter text */
+.user-table th.status-column,
+.user-table td.status-column {
+  width: auto; /* Adjust this width as necessary */
+}
+
+.user-table th,
+.user-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+  white-space: nowrap; /* Prevent text from spilling out of the box */
+  overflow: hidden; /* Ensures the text doesn't overflow outside of the cell */
+  text-overflow: ellipsis; /* Adds "..." for long text */
+}
+
+
+.user-table th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Responsive Font Sizes */
+.user-table th,
+.user-table td {
+  font-size: 14px; /* Reducing font size to fit data */
+}
+
+
+
+/* Buttons */
+button {
+  background-color: #007BFF; 
+  color: white;
+  padding: 5px  8px;
+  font-size: 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgb(0, 86, 179);
+}
+/* Pagination Styles */
+.pagination-container {
+  display: flex;
+  justify-content: center; /* Center the pagination horizontally */
+  margin-top: 20px;
+}
+
+.pagination {
+  display: flex; /* Ensure pagination is horizontal */
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
+}
+
+.pagination li {
+  margin: 0 5px; /* Add some space between buttons */
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid #007bff;
+  border-radius: 3px;
+  color: #007bff;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination .active a {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination .disabled a {
+  color: #ccc;
+  cursor: not-allowed;
+  border-color: #ccc;
+}
